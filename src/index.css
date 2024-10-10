@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Jersey+25&display=swap');
+@layer base {
+    body { 
+         @apply font-jetbrains bg-gradient-to-b  from-black/95 via-neutral-950 to-[#131213] w-full px-6 mb-0
+    }
+
+
+}
