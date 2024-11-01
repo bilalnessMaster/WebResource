@@ -10,7 +10,7 @@ const Page = () => {
   const { title } = useParams();
   const resource = resources.find((resource) => resource.title === title);
   return (
-    <div className=" bg-gradient-t-b mt-6 from-[#323232] to-[#10020D] h-screen space-y-10 ">
+    <div className=" bg-gradient-t-b mt-6 from-[#323232] to-[#10020D] h-[910px] space-y-10 ">
       <Wrapper>
         <div className=" p-1 relative ">
           <div
@@ -24,7 +24,7 @@ const Page = () => {
                 // }}
                 // transition={{
                 //   duration : 0.3,
-
+                target='_blank'
                 onMouseEnter={() => setHover(true)}
                 onMouseLeave={() => setHover(false)}
                 // }}
@@ -50,7 +50,7 @@ const Page = () => {
 
               <div className="flex flex-col gap-4 ">
                 <h1 className="lg:text-8xl font-bold md:text-6xl  text-4xl">Description</h1>
-                <p className="lg:text-3xl md:text-2xl w-2/3 text-start text-white/75 lg:leading-10 ">
+                <p className="lg:text-3xl md:text-2xl w-[90%] lg:w-2/3 text-start text-white/75 lg:leading-10 ">
                   {resource.description}
                 </p>
               </div>
@@ -69,7 +69,7 @@ const Page = () => {
                 </p>
               </div>
               <div className="absolute  left-1/2 fo  top-1/3 ">
-                <h1 className="text-[400px] leading-[350px]  font-IBM font-extrabold  mix-blend-difference opacity-75 text-[#231226] ">
+                <h1 className="text-[400px] leading-[350px]  font-jersey font-extrabold  mix-blend-difference opacity-75 text-[#231226] ">
                   {resource.title}
                 </h1>
               </div>
@@ -77,7 +77,9 @@ const Page = () => {
           </div>
         </div>
 
-        <Footer className="w-full " />
+       <div className="hidden lg:flex">
+       <Footer className="w-full " />
+       </div>
       </Wrapper>
     </div>
   );

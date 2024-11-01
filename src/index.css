@@ -6,7 +6,7 @@
     body { 
          @apply font-jetbrains bg-gradient-to-b  from-black/95 via-neutral-950 to-[#131213] w-full px-6 mb-0
     }
-    *{
+    * { 
         @apply m-0
     }
 

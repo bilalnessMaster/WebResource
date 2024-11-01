@@ -20,9 +20,9 @@ const Header = () => {
             <div className=' items-center gap-4 hidden md:flex '>
             <Hover name={'Toturials'}/>
             <DropMenu name='More'>
-                <Card title="Discord me" tag="Hurry up" img={Logodiscord}/>
-                <Card title="Github " tag="Rate me" img={Componentgithub} className=''/>
-                <Card title="About" tag="Know more" img={about}/>
+                <Card title="Discord me" tag="#nobrainbilal"  img={Logodiscord}/>
+                <Card title="Github " tag="Rate me" href="https://github.com/bilalnessMaster/WebResource" img={Componentgithub} className=''/>
+                <Card title="About" tag="junior developer" href=""  img={about}/>
             </DropMenu>
             </div>
         </div>
