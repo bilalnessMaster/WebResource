@@ -33,12 +33,8 @@ const Resource = () => {
     }
     useEffect(()=> {
 
-        if(filter === "all") return setData(resources)
-            console.log(filter);
-            
-            const Filter = resources.filter(item => item.category.toLowerCase() === filter.toLowerCase())
-        console.log(Filter);
-        
+        if(filter === "all") return setData(resources)   
+        const Filter = resources.filter(item => item.category.toLowerCase() === filter.toLowerCase())
         setData(Filter)
         
         
@@ -46,8 +42,8 @@ const Resource = () => {
     },[filter])
 
   return (
-    <main className='relative  flex flex-col justify-center xl:w-[90%] mx-auto items-center mt-24  '>
-      <div className=' sticky top-9 z-20 bg-gradient-to-r   from-[#A9A6A6]/85 to-[#311131]/25 p-[2px] rounded-md '>
+    <main className='relative  flex flex-col justify-center xl:w-[90%] mx-auto items-center  md:mt-24  '>
+      <div className=' sticky top-9 z-20 bg-gradient-to-r hidden md:block  from-[#A9A6A6]/85 to-[#311131]/25 p-[2px] rounded-md '>
       <div className=''>
         <ul onClick={()=> setPagination(1)} className='relative flex z-20 justify-center items-center  lg:text-lg capitalize gap-2 md:gap-6 rounded-md font-jetbrains bg-neutral-950/95  md:px-5 md:py-3 text-sm px-2 py-2 '>
            
@@ -61,6 +57,16 @@ const Resource = () => {
             
         </ul>
       </div>
+      </div>
+      <div className='w-full h-12 fixed  flex md:hidden z-50  bottom-1 px-2'>
+            <select name="" id="" onChange={(e)=>setFilter(e.target.value)}  className='border-2 border-amber-600/25 py-2 text-amber-300 px-2 capitalize aria-selected:mb-2 outline-none w-full h-full bg-neutral-950 rounded '>
+                <option value="all" >all</option>
+                <option value="Animation">Animation</option>
+                <option value="channels" >channels</option>
+                <option value="inspiration" >inspiration</option>
+                <option value="tools" >tools</option>
+                <option value="typography" >typography</option>
+            </select>
       </div>
        <section className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4  mt-9 gap-3  xl:gap-5 w-full px-4 '>
 
